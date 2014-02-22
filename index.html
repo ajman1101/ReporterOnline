@@ -1,0 +1,55 @@
+
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Andrew Mandula</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+		<script src="jQuery.js"></script>
+		<script type="text/javascript">
+		 $.getJSON("2014-02-21-reporter-export.json", function(data){
+			for (snapshot in data.snapshots) {
+				
+				pdata  = data.snapshots[snapshot];
+				
+				console.log(pdata.location.placemark.name);
+				
+			}
+		 }); 
+		
+		</script>
+		
+
+
+
+	</head>
+	
+	<body>
+	
+	<h1 id="header">ANDREW MANDULA</h1>
+	
+
+	
+		<div id='content'>
+		
+
+     <h3>Test</h3>
+     <p>
+	Test
+	 </p>
+
+	 
+	 
+
+		<h3>Other Test</h3>
+		<p>
+		Other Test
+		</p>
+		
+		
+		
+	</body>
+</html>
