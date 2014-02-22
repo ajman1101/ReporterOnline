@@ -7,18 +7,41 @@
 		<title>Andrew Mandula</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
 		<script src="jQuery.js"></script>
+		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="KEY_GOES_HERE"></script>
 		<script type="text/javascript">
-		 $.getJSON("2014-02-21-reporter-export.json", function(data){
-			for (snapshot in data.snapshots) {
-				
-				pdata  = data.snapshots[snapshot];
-				
-				console.log(pdata.location.placemark.name);
-				
-			}
-		 }); 
+		window.onload = init;
+		
+		var jsonFile;
+		var options = {
+			success: function(files) {
+				jsonFile = files[0];
+				getJSON(jsonFile);
+			},
+			cancel: function() {
+				jsonFile = undefined;
+			},
+			linkType: "direct",
+			multiselect: false,
+			extensions: ['.json'],
+		};
+		
+		function init() {
+			var button = Dropbox.createChooseButton(options);
+			document.getElementById("content").appendChild(button);
+		}
+		
+		function getJSON(file) {
+			 $.getJSON(jsonFile.link, function(data){
+				for (snapshot in data.snapshots) {
+					
+					pdata  = data.snapshots[snapshot];
+					
+					console.log(pdata.location.placemark.name);
+					
+				}
+			 }); 
+		 }
 		
 		</script>
 		
