@@ -8,7 +8,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<script src="jQuery.js"></script>
+		
 		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="KEY_GOES_HERE"></script>
+		<script src="protovis.js"></script>
+		<script type="text/javascript" src="pie.js"></script>
 		<script type="text/javascript">
 		"use strict";
 		window.onload = init;
@@ -55,9 +58,15 @@
 		 }
 		
 		</script>
-		
 
+		<style type="text/css">
 
+#fig {
+  width: 400px;
+  height: 400px;
+}
+
+    </style>
 
 	</head>
 	
@@ -70,10 +79,41 @@
 		<div id='content'>
 		
 
-     <h3>Test</h3>
-     <p>
+     <h3>Test 33</h3>
 	Test
-	 </p>
+	<div id="center"><div id="fig">
+	<script type="text/javascript+protovis">
+		
+		/* Sizing and scales. */
+var w = 400,
+    h = 400,
+    r = w / 2,
+    a = pv.Scale.linear(0, pv.sum(data)).range(0, 2 * Math.PI);
+
+/* The root panel. */
+var vis = new pv.Panel()
+    .width(w)
+    .height(h);
+
+/* The wedge, with centered label. */
+vis.add(pv.Wedge)
+    .data(data.sort(pv.reverseOrder))
+    .bottom(w / 2)
+    .left(w / 2)
+    .innerRadius(r - 40)
+    .outerRadius(r)
+    .angle(a)
+    .event("mouseover", function() this.innerRadius(0))
+    .event("mouseout", function() this.innerRadius(r - 40))
+  .anchor("center").add(pv.Label)
+    .visible(function(d) d > .15)
+    .textAngle(0)
+    .text(function(d) d.toFixed(2));
+
+vis.render();
+		</script>
+		
+	</div></div>	
 
 	 
 	 
