@@ -1,89 +1,123 @@
-
-
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Andrew Mandula</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<script src="jQuery.js"></script>
-		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="KEY_GOES_HERE"></script>
-		<script type="text/javascript">
-		"use strict";
-		window.onload = init;
+<head>
+	<title>Andrew Mandula</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<script src="jQuery.js"></script>
+	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="KEY_GOES_HERE"></script>
+	<script src="reporterUtils.js"></script>
+	<script>
+	// Setup
+	"use strict";
+	window.onload = init;
+	
+	// Globals	
+	var dropBoxFiles = [];
+	var reporterObjects = [];
+	var responses = [];
+	var dataIndex = 0;
+	var options = {
+		success: function(files) {
+			clearData();
+			dropBoxFiles = files;
+			setDataFromDropboxFiles(dropBoxFiles);
+		},
+		cancel: function() {
+			clearData();
+		},
+		linkType: "direct",
+		multiselect: true,
+		extensions: ['.json']
+	};
+	
+	// Functions
+	function init() {
+		// Remote files
+		// Add dropbox chooser button to the page
+		var button = Dropbox.createChooseButton(options);
+		var content = document.querySelector("#content");
+		content.appendChild(button);
 		
-		var options = {
-			success: function(files) {
-				if (files.length > 1) {
-					getJSONFiles(files);
-				}
-				else {
-					getJSON(files[0]);
-				}
-			},
-			cancel: function() {
-				jsonFile = undefined;
-			},
-			linkType: "direct",
-			multiselect: true,
-			extensions: ['.json']
-		};
+		// Local files (for testing)
+		var localTestInputs = document.querySelector('#localTestInputs');
+		var fileReader = new FileReader();
+		// Add "Choose a file" button
+		var fileInput = document.createElement('input');
+		fileInput.type = 'file';
+		localTestInputs.appendChild(fileInput);
+		// Add the question text field
+		var questionPrompt = document.createElement('input');
+		questionPrompt.type = 'text';
+		localTestInputs.appendChild(questionPrompt);
+		// Add "Submit Question" button
+		var submitPrompt = document.createElement('input');
+		submitPrompt.type = 'button';
+		submitPrompt.value = 'Submit Question';
+		localTestInputs.appendChild(submitPrompt);
 		
-		function init() {
-			var button = Dropbox.createChooseButton(options);
-			document.getElementById("content").appendChild(button);
-		}
-		
-		function getJSONFiles(files) {
-			for (var i = 0; i < files.length; i++) {
-				getJSON(files[i]);
+		// When the file input has changed
+		fileInput.addEventListener('change', function(e) {
+			console.log('changed fileInput');
+			for (var i = 0; i < fileInput.files.length; i++) {
+				fileReader.readAsText(fileInput.files[i]);
 			}
-		}
+		});
 		
-		function getJSON(file) {
-			console.log(file.link);
-			 $.getJSON(file.link, function(data){
-				for (var snapshot in data.snapshots) {
+		// When the file has been loaded
+		fileReader.addEventListener('loadend', function(e) {
+			console.log('file loaded successfully');
+			var reporterObject = JSON.parse(fileReader.result);
+			var response = getResponses(reporterObject);
+			
+			reporterObjects.push(reporterObject);
+			responses.push(response);
+			console.log(response);
+		});
+		
+		// When the user wants to check a question
+		submitPrompt.addEventListener('click', function(e) {
+			console.log(getQuestionData(questionPrompt.value));
+		});
+	}
+	
+	function setDataFromDropboxFiles(files) {
+		// Parse JSON object from each dropbox file
+		for (var i = 0; i < files.length; i++) {
+			var file = files[i];
+			$.getJSON(file.link, function(jsonData){
+				console.log(jsonData);
 				
-					var pdata = data.snapshots[snapshot];
-					
-					console.log(pdata.location.placemark.name);
-					
-				}
-			 }); 
-		 }
-		
-		</script>
-		
-
-
-
-	</head>
+				// push data
+				reporterObjects.push(jsonData);
+				var response = getResponses(jsonData);
+				responses.push(response);
+			});
+		}
+	}
 	
-	<body>
-	
+	// Clear global data
+	function clearData() {
+		dropBoxFiles = [];
+		reporterObjects = [];
+		responses = [];
+	}
+	</script>
+</head>
+
+<body>
 	<h1 id="header">ANDREW MANDULA</h1>
-	
-
-	
-		<div id='content'>
-		
-
-     <h3>Test</h3>
-     <p>
-	Test
-	 </p>
-
-	 
-	 
-
+	<section id='content'>
+		<h3>Test</h3>
+		<p>
+		Test
+		</p>
+		 
 		<h3>Other Test</h3>
 		<p>
-		Other Test
+			Other Test
 		</p>
-		
-		
-		
-	</body>
+	</section>
+	<section id='localTestInputs'></section>
+</body>
 </html>
