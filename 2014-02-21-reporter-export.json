@@ -1,0 +1,402 @@
+{
+  "snapshots" : [
+    {
+      "battery" : 1,
+      "location" : {
+        "verticalAccuracy" : 10,
+        "timestamp" : 414698585.610809,
+        "longitude" : -77.68220789467746,
+        "latitude" : 43.08282802228316,
+        "course" : 0,
+        "placemark" : {
+          "thoroughfare" : "Charters Way",
+          "postalCode" : "14623",
+          "subAdministrativeArea" : "Monroe",
+          "subLocality" : "Henrietta",
+          "locality" : "Rochester",
+          "name" : "Rochester Institute of Technology",
+          "country" : "United States",
+          "administrativeArea" : "NY"
+        },
+        "horizontalAccuracy" : 65,
+        "speed" : -1
+      },
+      "steps" : -1,
+      "day" : 414651600,
+      "audio" : {
+        "avg" : -57.99726,
+        "peak" : -48.03226
+      },
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "windMPH" : 13,
+        "windDirection" : "South",
+        "tempF" : 40.4,
+        "precipTodayIn" : 0.14,
+        "windGustKPH" : 29,
+        "feelslikeC" : 1,
+        "visibilityMi" : 10,
+        "feelslikeF" : 33,
+        "stationID" : "KNYHENRI1",
+        "latitude" : 43.05201,
+        "windGustMPH" : 18,
+        "pressureIn" : 29.66,
+        "pressureMb" : 1004,
+        "relativeHumidity" : "81%",
+        "longitude" : -77.59123200000001,
+        "precipTodayMetric" : 4,
+        "windKPH" : 20.9,
+        "windDegrees" : 186,
+        "tempC" : 4.7,
+        "weather" : "Overcast",
+        "uv" : 0.8,
+        "dewpointC" : 2,
+        "visibilityKM" : 16.1
+      },
+      "date" : 414698585.042889,
+      "responses" : [
+        {
+          "numericResponse" : "2",
+          "questionPrompt" : "How many games have you played?"
+        },
+        {
+          "questionPrompt" : "Are you working?",
+          "answeredOptions" : [
+            "No"
+          ]
+        },
+        {
+          "questionPrompt" : "What are you doing?",
+          "tokens" : [
+            "Listening to Music"
+          ]
+        },
+        {
+          "questionPrompt" : "Where are you?",
+          "locationResponse" : {
+            "text" : "RIT Global Village",
+            "location" : {
+              "verticalAccuracy" : -1,
+              "timestamp" : 414194956.607708,
+              "longitude" : -77.6817512512207,
+              "latitude" : 43.08274338666914,
+              "course" : 0,
+              "horizontalAccuracy" : 0,
+              "speed" : -1
+            },
+            "foursquareVenueId" : "4c7bca342d3ba14310f894d0"
+          }
+        }
+      ]
+    },
+    {
+      "battery" : 0.9,
+      "location" : {
+        "verticalAccuracy" : 10,
+        "timestamp" : 414702990.781387,
+        "longitude" : -77.67980550983015,
+        "latitude" : 43.08410752221387,
+        "course" : 0,
+        "placemark" : {
+          "thoroughfare" : "Reynolds Dr",
+          "postalCode" : "14623",
+          "subAdministrativeArea" : "Monroe",
+          "subLocality" : "Henrietta",
+          "locality" : "Rochester",
+          "name" : "Rochester Institute of Technology",
+          "country" : "United States",
+          "administrativeArea" : "NY"
+        },
+        "horizontalAccuracy" : 65,
+        "speed" : -1
+      },
+      "steps" : -1,
+      "day" : 414651600,
+      "audio" : {
+        "avg" : -28.34863,
+        "peak" : -17.14791
+      },
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "windMPH" : 0,
+        "windDirection" : "South",
+        "tempF" : 42.5,
+        "precipTodayIn" : 0.14,
+        "windGustKPH" : 17.7,
+        "feelslikeC" : 6,
+        "visibilityMi" : 10,
+        "feelslikeF" : 42,
+        "stationID" : "KNYHENRI1",
+        "latitude" : 43.05201,
+        "windGustMPH" : 11,
+        "pressureIn" : 29.65,
+        "pressureMb" : 1004,
+        "relativeHumidity" : "75%",
+        "longitude" : -77.59123200000001,
+        "precipTodayMetric" : 4,
+        "windKPH" : 0,
+        "windDegrees" : 183,
+        "tempC" : 5.8,
+        "weather" : "Overcast",
+        "uv" : 2,
+        "dewpointC" : 2,
+        "visibilityKM" : 16.1
+      },
+      "date" : 414702976.008205,
+      "responses" : [
+        {
+          "numericResponse" : "2",
+          "questionPrompt" : "How many games have you played?"
+        },
+        {
+          "questionPrompt" : "Are you working?",
+          "answeredOptions" : [
+            "Yes"
+          ]
+        },
+        {
+          "questionPrompt" : "What are you doing?",
+          "tokens" : [
+            "Listening to Music",
+            "Listening to People",
+            "HW"
+          ]
+        },
+        {
+          "questionPrompt" : "Where are you?",
+          "locationResponse" : {
+            "text" : "Golisano College of Computing &amp; Information Sciences",
+            "location" : {
+              "verticalAccuracy" : -1,
+              "timestamp" : 414427291.779795,
+              "longitude" : -77.67978671433136,
+              "latitude" : 43.08427147674767,
+              "course" : 0,
+              "horizontalAccuracy" : 0,
+              "speed" : -1
+            },
+            "foursquareVenueId" : "4b462f61f964a520671926e3"
+          }
+        },
+        {
+          "questionPrompt" : "Who are you with?",
+          "tokens" : [
+            "Alex Mack"
+          ]
+        }
+      ]
+    },
+    {
+      "battery" : 0.85,
+      "location" : {
+        "verticalAccuracy" : 10,
+        "timestamp" : 414712858.063796,
+        "longitude" : -77.67976620813971,
+        "latitude" : 43.08475147406094,
+        "course" : 0,
+        "placemark" : {
+          "thoroughfare" : "Reynolds Dr",
+          "postalCode" : "14623",
+          "subAdministrativeArea" : "Monroe",
+          "subLocality" : "Henrietta",
+          "locality" : "Rochester",
+          "name" : "Rochester Institute of Technology",
+          "country" : "United States",
+          "administrativeArea" : "NY"
+        },
+        "horizontalAccuracy" : 65,
+        "speed" : -1
+      },
+      "steps" : -1,
+      "day" : 414651600,
+      "audio" : {
+        "avg" : -31.38995,
+        "peak" : -22.32979
+      },
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "windMPH" : 2,
+        "windDirection" : "SW",
+        "tempF" : 42.5,
+        "precipTodayIn" : 0.14,
+        "windGustKPH" : 16.1,
+        "feelslikeC" : 6,
+        "visibilityMi" : 10,
+        "feelslikeF" : 42,
+        "stationID" : "KNYHENRI1",
+        "latitude" : 43.05201,
+        "windGustMPH" : 10,
+        "pressureIn" : 29.68,
+        "pressureMb" : 1005,
+        "relativeHumidity" : "70%",
+        "longitude" : -77.59123200000001,
+        "precipTodayMetric" : 4,
+        "windKPH" : 3.2,
+        "windDegrees" : 224,
+        "tempC" : 5.8,
+        "weather" : "Mostly Cloudy",
+        "uv" : 0,
+        "dewpointC" : 1,
+        "visibilityKM" : 16.1
+      },
+      "date" : 414712857.859816,
+      "responses" : [
+        {
+          "numericResponse" : "2",
+          "questionPrompt" : "How many games have you played?"
+        },
+        {
+          "questionPrompt" : "Are you working?",
+          "answeredOptions" : [
+            "Yes"
+          ]
+        },
+        {
+          "questionPrompt" : "What are you doing?",
+          "tokens" : [
+            "Listening to Music",
+            "Listening to People",
+            "HW",
+            "Reading"
+          ]
+        },
+        {
+          "questionPrompt" : "Where are you?",
+          "locationResponse" : {
+            "text" : "Golisano College of Computing &amp; Information Sciences",
+            "location" : {
+              "verticalAccuracy" : -1,
+              "timestamp" : 414427291.779795,
+              "longitude" : -77.67978671433136,
+              "latitude" : 43.08427147674767,
+              "course" : 0,
+              "horizontalAccuracy" : 0,
+              "speed" : -1
+            },
+            "foursquareVenueId" : "4b462f61f964a520671926e3"
+          }
+        },
+        {
+          "questionPrompt" : "Who are you with?",
+          "tokens" : [
+            "Alex Mack"
+          ]
+        }
+      ]
+    },
+    {
+      "battery" : 0.8,
+      "location" : {
+        "verticalAccuracy" : 10,
+        "timestamp" : 414719640.895028,
+        "longitude" : -77.6797748154745,
+        "latitude" : 43.08479482689083,
+        "course" : 0,
+        "placemark" : {
+          "thoroughfare" : "Reynolds Dr",
+          "postalCode" : "14623",
+          "subAdministrativeArea" : "Monroe",
+          "subLocality" : "Henrietta",
+          "locality" : "Rochester",
+          "name" : "Rochester Institute of Technology",
+          "country" : "United States",
+          "administrativeArea" : "NY"
+        },
+        "horizontalAccuracy" : 65,
+        "speed" : -1
+      },
+      "steps" : -1,
+      "day" : 414651600,
+      "audio" : {
+        "avg" : -41.95707,
+        "peak" : -15.68093
+      },
+      "sync" : 0,
+      "connection" : 1,
+      "background" : 0,
+      "dwellStatus" : 0,
+      "draft" : 0,
+      "weather" : {
+        "windMPH" : 3,
+        "windDirection" : "WSW",
+        "tempF" : 37.3,
+        "precipTodayIn" : 0.14,
+        "windGustKPH" : 11.3,
+        "feelslikeC" : 3,
+        "visibilityMi" : 10,
+        "feelslikeF" : 37,
+        "stationID" : "KNYHENRI1",
+        "latitude" : 43.05201,
+        "windGustMPH" : 7,
+        "pressureIn" : 29.7,
+        "pressureMb" : 1006,
+        "relativeHumidity" : "84%",
+        "longitude" : -77.59123200000001,
+        "precipTodayMetric" : 4,
+        "windKPH" : 4.8,
+        "windDegrees" : 239,
+        "tempC" : 2.9,
+        "weather" : "Mostly Cloudy",
+        "uv" : 0,
+        "dewpointC" : 1,
+        "visibilityKM" : 16.1
+      },
+      "date" : 414719639.966738,
+      "responses" : [
+        {
+          "numericResponse" : "3",
+          "questionPrompt" : "How many games have you played?"
+        },
+        {
+          "questionPrompt" : "Are you working?",
+          "answeredOptions" : [
+            "No"
+          ]
+        },
+        {
+          "questionPrompt" : "What are you doing?",
+          "tokens" : [
+            "Listening to Music",
+            "Listening to People",
+            "HW",
+            "Reading"
+          ]
+        },
+        {
+          "questionPrompt" : "Where are you?",
+          "locationResponse" : {
+            "text" : "Golisano College of Computing &amp; Information Sciences",
+            "location" : {
+              "verticalAccuracy" : -1,
+              "timestamp" : 414427291.779795,
+              "longitude" : -77.67978671433136,
+              "latitude" : 43.08427147674767,
+              "course" : 0,
+              "horizontalAccuracy" : 0,
+              "speed" : -1
+            },
+            "foursquareVenueId" : "4b462f61f964a520671926e3"
+          }
+        },
+        {
+          "questionPrompt" : "Who are you with?",
+          "tokens" : [
+            "Alex Mack"
+          ]
+        }
+      ]
+    }
+  ]
+}
